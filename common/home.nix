@@ -78,5 +78,13 @@
       userName = "Grand";
       userEmail = "grand.uk@tutanota.com";
     };
+    # Partial History completion in bash
+    bash = {
+      enable = true;
+      bashrcExtra = ''
+        bind '"\e[A": history-search-backward'
+        bind '"\e[B": history-search-forward'
+      '';
+    };
   };
 }

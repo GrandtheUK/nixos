@@ -1,6 +1,6 @@
 { config, pkgs, ...}: {
   imports = [
-
+    # ./hardware.nix
   ];
 
   # laptop specific packages

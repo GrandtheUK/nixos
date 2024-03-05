@@ -15,7 +15,7 @@
     };
 
     custom-fonts = {
-      url = "path:common/fonts.nix";
+      url = "git+ssh://git@github.com/GrandtheUK/impact-font-nix.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
@@ -31,15 +31,17 @@
         laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            ./common.nix
-            ./laptop-core.nix
+            ./laptop/hardware.nix
+            ./common/common.nix
+            ./laptop/core.nix
             inputs.home-manager.nixosModules.default
-            #inputs.nixpkgs.flake.overlays
+            # inputs.nixpkgs.flake.overlays
           ];
         };
         desktop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
+            ./desktop.hardware.nix
             ./common.nix
             ./desktop/core.nix
             inputs.home-manager.nixosModules.default

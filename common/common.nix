@@ -1,4 +1,4 @@
-{ config, pkgs, custom-fonts, ...}: {
+{ config, pkgs, custom-fonts, inputs, ...}: {
   specialArgs = {inherit inputs;};
   imports = [
     inputs.home-manager.nixosModules.default
@@ -20,8 +20,8 @@
       efiSupport = true;
       fsIdentifier = "label";
       devices = [ "nodev" ];
-    }
-  }
+    };
+  };
 
   # Networking & timezone
   networking.networkmanager.enable = true;
@@ -30,13 +30,13 @@
   # set up home-manager and user accounts
 
   home-manager = {
-    extraSpecialArgs = { inherit inputs; };
+    extraSpecialArgs = {inherit inputs;};
     users = {
-      "ben" = import ./home.nix
-    }
-  }
+      "ben" = import ./home.nix;
+    };
+  };
   users.users.ben = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
-  }
+  };
 }

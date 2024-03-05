@@ -14,13 +14,15 @@
   # Remove unused software
   environment.plasma6.excludePackages = [
       pkgs.kdePackages.elisa
-      pkgs.kdePackages.kwrite
+      pkgs.kdePackages.kwrited
   ];
 
   # Add additional kde software
   environment = {
     systemPackages = with pkgs; [
       libsForQt5.polkit-kde-agent
+      konsole
+      libsForQt5.kate
     ];
   };
 }

@@ -1,12 +1,21 @@
 { config, pkgs, custom-fonts, inputs, ...}: {
-  specialArgs = {inherit inputs;};
+  # specialArgs = {inherit inputs;};
   imports = [
     inputs.home-manager.nixosModules.default
     ./kde.nix
     ./gaming.nix
+    ./audio.nix
   ];
   # enable all software
   nixpkgs.config.allowUnfree = true;
+
+  # enable generic linux binaries
+  programs = {
+    nix-ld.enable = true;
+    nix-ld.libraries = with pkgs; [
+      # missing libraries
+    ];
+  };
 
   #enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -38,5 +47,19 @@
   users.users.ben = {
     isNormalUser = true;
     extraGroups = [ "wheel" ];
+    # common user packages. temporary.
+    packages = with pkgs; [
+      firefox
+      discord
+      vscodium
+    ];
   };
+
+  # common system packages
+  environment.systemPackages = with pkgs; [
+    nano
+    wget
+    git
+    btrfs-progs
+  ];
 }

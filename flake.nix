@@ -4,6 +4,8 @@
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
 
+    nixpkgs-android.url = "github:nixos/nixpkgs/nixos-unstable/80a3b4b7de2fa0570904c1e4bea7fda58be60c5d";
+
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";

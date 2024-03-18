@@ -15,6 +15,7 @@
 
   environment.systemPackages = with pkgs; [
     libreoffice-qt
+    nixpkgs-android.android-studio
   ];
 
   specialisation = {

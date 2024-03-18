@@ -18,11 +18,15 @@
   ];
 
   # Add additional kde software
-  environment = {
-    systemPackages = with pkgs; [
+  environment.systemPackages = with pkgs; [
       libsForQt5.polkit-kde-agent
       konsole
       libsForQt5.kate
+      libsForQt5.xdg-desktop-portal-kde
+      xdg-desktop-portal
     ];
-  };
+
+
+  # kde connect
+  programs.kdeconnect.enable = true;
 }

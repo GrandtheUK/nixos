@@ -18,12 +18,20 @@
       url = "git+ssh://git@github.com/GrandtheUK/impact-font-nix.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    jovian = {
+      url = "github:Jovian-Experiments/Jovian-NixOS";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { self, nixpkgs, custom-fonts, ... }@inputs:
+  outputs = { self, nixpkgs, custom-fonts, jovian, nixpkgs-android, ... }@inputs:
     let
       system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs {
+        overlays = [ jovian.overlay ];
+        inherit system;
+      };
     in
     {
     

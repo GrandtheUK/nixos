@@ -21,14 +21,16 @@
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # common boot loader/efi details
-  boot.loader = {
-    systemd-boot.enable = false;
-    efi.efiSysMountPoint = "/boot/efi";
-    grub = {
-      enable = true;
-      efiSupport = true;
-      fsIdentifier = "label";
-      devices = [ "nodev" ];
+  boot = {
+    loader = {
+      systemd-boot.enable = false;
+      efi.efiSysMountPoint = "/boot/efi";
+      grub = {
+        enable = true;
+        efiSupport = true;
+        fsIdentifier = "label";
+        devices = [ "nodev" ];
+      };
     };
   };
 

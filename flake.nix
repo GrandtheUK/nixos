@@ -35,12 +35,12 @@
     in
     {
       nixosConfigurations = {
-        laptop = nixpkgs.lib.nixosSystem {
+        nixUSB = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            ./laptop/hardware.nix
+            ./nixUSB/hardware.nix
             ./common/common.nix
-            ./laptop/core.nix
+            ./nixUSB/core.nix
             inputs.home-manager.nixosModules.default
             # inputs.nixpkgs.flake.overlays
           ];

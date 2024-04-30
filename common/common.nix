@@ -14,10 +14,7 @@
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [
       # missing libraries
-    ];
-
-    # enable nix helper
-    nh.enable = true;
+    ];    
   };
 
   #enable flakes
@@ -63,6 +60,7 @@
 
   # common system packages
   environment.systemPackages = with pkgs; [
+    nh
     nano
     wget
     git

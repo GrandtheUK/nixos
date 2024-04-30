@@ -7,6 +7,11 @@
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 
+  # nix helper config
+  programs.nh = {
+    flake = "~/.nixos";
+  };
+
   # laptop specific packages
   users.users.ben.packages = with pkgs; [
     gimp

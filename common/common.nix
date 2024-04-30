@@ -9,12 +9,15 @@
   # enable all software
   nixpkgs.config.allowUnfree = true;
 
-  # enable generic linux binaries
   programs = {
+    # enable generic linux binaries
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [
       # missing libraries
     ];
+
+    # enable nix helper
+    nh.enable = true;
   };
 
   #enable flakes

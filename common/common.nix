@@ -54,6 +54,7 @@
       firefox
       discord
       vscodium
+      krita
     ];
   };
 
@@ -63,5 +64,6 @@
     wget
     git
     btrfs-progs
+    nix-output-monitor
   ];
 }

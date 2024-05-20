@@ -10,7 +10,7 @@
     };
 
     envision = {
-      url = "gitlab:Scrumplex/rex2/nix";
+      url = "gitlab:Scrumplex/envision/nix";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 

@@ -1,4 +1,4 @@
-{ config, pkgs, custom-fonts, inputs, ...}: {
+{ config, pkgs, custom-fonts, inputs, envision, ...}: {
   # specialArgs = {inherit inputs;};
   imports = [
     inputs.home-manager.nixosModules.default
@@ -55,6 +55,7 @@
       discord
       vscodium
       krita
+      envision.envision
     ];
   };
 

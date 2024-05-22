@@ -55,7 +55,6 @@
       discord
       vscodium
       krita
-      envision.envision
     ];
   };
 

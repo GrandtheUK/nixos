@@ -55,6 +55,8 @@
       discord
       vscodium
       krita
+      cargo
+      rustc
     ];
   };
 

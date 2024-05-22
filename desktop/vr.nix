@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ...}: {
   # Envison stuff to go here
   environment.systemPackages = [
-    inputs.envision.packages.envision
+    inputs.envision.packages.x86_64-linux.envision
   ];
   # services.monado = {
   #   enable = true;

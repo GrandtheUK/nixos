@@ -25,7 +25,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, custom-fonts, jovian, ... }@inputs:
+  outputs = { self, nixpkgs, custom-fonts, jovian, envision, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -41,6 +41,7 @@
             ./nixUSB/hardware.nix
             ./common/common.nix
             ./nixUSB/core.nix
+            ./desktop/vr.nix
             inputs.home-manager.nixosModules.default
             # inputs.nixpkgs.flake.overlays
           ];

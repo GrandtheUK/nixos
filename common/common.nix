@@ -1,4 +1,4 @@
-{ config, pkgs, custom-fonts, inputs, envision, ...}: {
+{ config, pkgs, custom-fonts, inputs, ...}: {
   # specialArgs = {inherit inputs;};
   imports = [
     inputs.home-manager.nixosModules.default

@@ -1,10 +1,8 @@
-{ config, pkgs, inputs, nixpkgs, ...}: {
+{ config, pkgs, inputs, ...}: {
   # Envison stuff to go here
-  nixpkgs.xr.enable = true;
-
   environment.systemPackages = [
     inputs.envision.packages.x86_64-linux.envision
-    pkgs.wlx-overlay-s
+    inputs.nixpkgs-xr.packages.x86_64-linux.wlx-overlay-s
   ];
   # services.monado = {
   #   enable = true;

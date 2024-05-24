@@ -23,9 +23,13 @@
       url = "github:Jovian-Experiments/Jovian-NixOS";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixpkgs-xr = {
+      url = "github:nix-community/nixpkgs-xr";
+      inputs.nixpkgs.follows = "nixpkgs";
+    }
   };
 
-  outputs = { self, nixpkgs, custom-fonts, jovian, envision, ... }@inputs:
+  outputs = { self, nixpkgs, custom-fonts, jovian, envision, nixpkgs-xr, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -43,6 +47,7 @@
             ./nixUSB/core.nix
             ./desktop/vr.nix
             inputs.home-manager.nixosModules.default
+            nixpkgs-xr.nixosModules.nixpkgs-xr
             # inputs.nixpkgs.flake.overlays
           ];
         };

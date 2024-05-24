@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, ...}: {
+{ config, pkgs, inputs, nixpkgs, ...}: {
   # Envison stuff to go here
   nixpkgs.xr.enable = true;
 

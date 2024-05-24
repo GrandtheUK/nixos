@@ -26,7 +26,7 @@
     nixpkgs-xr = {
       url = "github:nix-community/nixpkgs-xr";
       inputs.nixpkgs.follows = "nixpkgs";
-    }
+    };
   };
 
   outputs = { self, nixpkgs, custom-fonts, jovian, envision, nixpkgs-xr, ... }@inputs:

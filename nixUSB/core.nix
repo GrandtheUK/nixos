@@ -33,6 +33,6 @@
     };
   };
 
-  # copied from configuration.nix don't remove it or nix will complain
+  # nixUSB state version. change if reinstall not from this config
   system.stateVersion = "23.11";
 }

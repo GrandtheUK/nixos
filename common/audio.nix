@@ -1,6 +1,6 @@
 { config, pkgs, custom-fonts, inputs, ...}: {
   # enable audio
-  sound.enable = true;
+  # sound.enable = true;
 
   # enable pipewire audio server
   services.pipewire = {
@@ -10,4 +10,8 @@
     alsa.enable = true;
     wireplumber.enable = true;
   };
+
+  environment.systemPackages = with pkgs; [
+    helvum
+  ];
 }

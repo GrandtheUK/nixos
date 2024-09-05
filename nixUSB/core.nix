@@ -31,20 +31,6 @@
         nvidiaSettings = true;
       };
     };
-    deck.configuration = {
-      imports = [
-        inputs.jovian.nixosModules.default
-      ];
-
-      jovian.devices.steamdeck.enable = true;
-
-      environment.systemPackages = with pkgs; [
-        libsForQt5.qt5.qtvirtualkeyboard
-        maliit-keyboard
-        maliit-framework 
-      ];
-    };
-    
   };
 
   # copied from configuration.nix don't remove it or nix will complain

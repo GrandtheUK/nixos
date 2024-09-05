@@ -4,7 +4,7 @@
 #    inputs.envision.packages.x86_64-linux.envision
     inputs.nixpkgs-xr.packages.x86_64-linux.wlx-overlay-s
   ];
-  programms.envision = {
+  programs.envision = {
     enable = true;
   };
   # services.monado = {

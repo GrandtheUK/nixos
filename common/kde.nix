@@ -8,6 +8,7 @@
     desktopManager = {
       plasma6.enable = true;
     };
+  };
 
   # Enable polkit
   security.polkit.enable = true;

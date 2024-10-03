@@ -43,9 +43,10 @@
 
         nvidiaSettings = true;
 
-        amdgpuBusId = "PCI:3:0:0";
-
-        nvidiaBusId = "PCI:8:0:0";
+        prime = {
+          amdgpuBusId = "PCI:3:0:0";
+          nvidiaBusId = "PCI:8:0:0";
+        };
       };
     };
   };

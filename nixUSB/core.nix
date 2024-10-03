@@ -31,6 +31,23 @@
         nvidiaSettings = true;
       };
     };
+    mixed.configuration = {
+      services.xserver.videoDrivers = [ "amdgpu" "nvidia"];
+
+      hardware.nvidia = {
+        modesetting.enable = true;
+
+        powerManagement.enable = false;
+
+        open = false;
+
+        nvidiaSettings = true;
+
+        amdgpuBusId = "PCI:3:0:0";
+
+        nvidiaBusId = "PCI:8:0:0"
+      };
+    };
   };
 
   # nixUSB state version. change if reinstall not from this config

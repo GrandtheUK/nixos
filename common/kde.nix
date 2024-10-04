@@ -14,9 +14,9 @@
   security.polkit.enable = true;
 
   # Remove unused software
-  environment.plasma6.excludePackages = [
-      pkgs.kdePackages.elisa
-      pkgs.kdePackages.kwrited
+  environment.plasma6.excludePackages = with pkgs; [
+      kdePackages.elisa
+      kdePackages.kwrited
   ];
 
   # Add additional kde software
@@ -26,6 +26,7 @@
       libsForQt5.kate
       libsForQt5.xdg-desktop-portal-kde
       xdg-desktop-portal
+      kdePackages.partitionmanager
     ];
 
 

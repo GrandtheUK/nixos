@@ -58,7 +58,7 @@
           specialArgs = {inherit inputs;};
           modules = [
             ./desktop/hardware.nix
-            ./common.nix
+            ./common/common.nix
             ./desktop/core.nix
             inputs.home-manager.nixosModules.default
           ];

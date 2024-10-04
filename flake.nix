@@ -27,9 +27,11 @@
       url = "github:nix-community/nixpkgs-xr";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
   };
 
-  outputs = { self, nixpkgs, custom-fonts, jovian, envision, nixpkgs-xr, ... }@inputs:
+  outputs = { self, nixpkgs, custom-fonts, jovian, envision, nixpkgs-xr, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -48,6 +50,7 @@
             ./desktop/vr.nix
             inputs.home-manager.nixosModules.default
             nixpkgs-xr.nixosModules.nixpkgs-xr
+            nix-flatpak.nixosModules.nix-flatpak
             # inputs.nixpkgs.flake.overlays
           ];
         };

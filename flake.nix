@@ -29,6 +29,8 @@
     };
 
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
+
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
   outputs = { self, nixpkgs, custom-fonts, jovian, envision, nixpkgs-xr, nix-flatpak, ... }@inputs:

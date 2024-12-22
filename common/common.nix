@@ -58,6 +58,9 @@
       cargo
       rustc
     ];
+    packages = [
+      inputs.zen-browser.packages."${system}".specific
+    ]
   };
 
   # common system packages

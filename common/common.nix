@@ -57,8 +57,7 @@
       krita
       cargo
       rustc
-    ];
-    packages = [
+    ] ++ [
       inputs.zen-browser.packages."${system}".specific
     ];
   };

@@ -71,4 +71,16 @@
     btrfs-progs
     nix-output-monitor
   ];
+
+  services.avahi = {
+    nssmdns = true;
+    enable = true;
+    ipv4 = true;
+    ipv6 = false;
+    publish = {
+      enable = true;
+      addresses = true;
+      workstation = true;
+    };
+  };
 }

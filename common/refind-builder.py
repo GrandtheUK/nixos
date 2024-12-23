@@ -163,6 +163,8 @@ def main():
                     "@efibootmgr@/bin",
                     "@coreutils@/bin",
                     "@utillinux@/bin",
+                    "@findutils@/bin",
+                    "@gptfdisk@/bin",
                     "@gnugrep@/bin",
                     "@gnused@/bin",
                     "@gawk@/bin",

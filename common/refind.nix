@@ -23,7 +23,7 @@ let
 
     extraIcons = if cfg.extraIcons != null then cfg.extraIcons else "";
 
-    inherit (pkgs) refind efibootmgr coreutils gnugrep gnused gawk utillinux;
+    inherit (pkgs) refind efibootmgr coreutils findutils gptfdisk gnugrep gnused gawk utillinux;
 
     inherit (efi) efiSysMountPoint canTouchEfiVariables;
   };

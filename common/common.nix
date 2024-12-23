@@ -53,6 +53,7 @@
     packages = with pkgs; [
       firefox
       discord
+      discord-canary
       vscodium
       krita
       cargo

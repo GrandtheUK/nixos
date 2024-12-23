@@ -100,7 +100,7 @@
     supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
     mandatoryFeatures = [ ];
   }];
-  nix.distributedBUilds = true;
+  nix.distributedBuilds = true;
   nix.extraOptions = ''
     builders-user-substitutes = true
   '';

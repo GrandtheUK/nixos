@@ -65,7 +65,7 @@ def copy_from_profile(profile, generation, name, dry_run=False):
     store_file_path = profile_path(profile, generation, name)
     suffix = os.path.basename(store_file_path)
     store_dir = os.path.basename(os.path.dirname(store_file_path))
-    efi_file_path = "/efi/nixos/%s-%s.efi" % (store_dir, suffix)
+    efi_file_path = "/EFI/nixos/%s-%s.efi" % (store_dir, suffix)
     if not dry_run:
         copy_if_not_exists(store_file_path, "@efiSysMountPoint@%s" % (efi_file_path))
     return efi_file_path
@@ -152,7 +152,7 @@ def main():
     parser.add_argument('default_config', metavar='DEFAULT-CONFIG', help='The default NixOS config to boot')
     args = parser.parse_args()
 
-    mkdir_p("@efiSysMountPoint@/efi/refind")
+    mkdir_p("@efiSysMountPoint@/EFI/refind")
 
     if os.getenv("NIXOS_INSTALL_BOOTLOADER") == "1":
 
@@ -174,7 +174,7 @@ def main():
             print("DONT KNOW WHAT TO DO")
 
     if "@extraIcons@" != "":
-        icons_dir = "@efiSysMountPoint@/efi/refind/extra-icons"
+        icons_dir = "@efiSysMountPoint@/EFI/refind/extra-icons"
         if os.path.exists(icons_dir):
             if os.path.exists(icons_dir + "-backup"):
                 shutil.rmtree(icons_dir + "-backup")
@@ -191,7 +191,7 @@ def main():
             default_generation = generation
 
     write_refind_config(
-        "@efiSysMountPoint@/efi/refind/refind.conf",
+        "@efiSysMountPoint@/EFI/refind/refind.conf",
         default_generation,
         generations
     )

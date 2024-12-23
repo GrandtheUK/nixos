@@ -5,6 +5,7 @@
     ./kde.nix
     ./gaming.nix
     ./audio.nix
+    ./refind.nix
   ];
   # enable all software
   nixpkgs.config.allowUnfree = true;
@@ -25,11 +26,14 @@
     loader = {
       systemd-boot.enable = false;
       efi.efiSysMountPoint = "/boot/efi";
-      grub = {
+      # grub = {
+      #   enable = true;
+      #   efiSupport = true;
+      #   fsIdentifier = "label";
+      #   devices = [ "nodev" ];
+      # };
+      refind = {
         enable = true;
-        efiSupport = true;
-        fsIdentifier = "label";
-        devices = [ "nodev" ];
       };
     };
   };

@@ -72,6 +72,7 @@ in {
         (isYes "EFI_STUB")
       ];
     };
+    environment.systemPackages = with pkgs; [ refind ];
   };
 
 }

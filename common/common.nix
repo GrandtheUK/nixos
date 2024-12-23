@@ -26,15 +26,16 @@
     loader = {
       systemd-boot.enable = false;
       efi.efiSysMountPoint = "/boot/efi";
-      # grub = {
-      #   enable = true;
-      #   efiSupport = true;
-      #   fsIdentifier = "label";
-      #   devices = [ "nodev" ];
-      # };
-      refind = {
+      grub = {
         enable = true;
+        efiSupport = true;
+        fsIdentifier = "label";
+        devices = [ "nodev" ];
+        efiInstallAsRemovable = true;
       };
+      # refind = {
+      #   enable = true;
+      # };
     };
   };
 
@@ -88,4 +89,19 @@
       workstation = true;
     };
   };
+
+  # Distributed builds to desktop
+  nix.buildMachines = [ {
+    hostname = "arch-desktop.local";
+    system = "x86-64-linux";
+    protocol = "ssh-ng";
+    maxJobs = 2;
+    speedFactor = 2;
+    supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
+    mandatoryFeatures = [ ];
+  }];
+  nix.distributedBUilds = true;
+  nix.extraOptions = ''
+    builders-user-substitutes = true
+  '';
 }

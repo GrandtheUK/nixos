@@ -153,6 +153,7 @@ def main():
     args = parser.parse_args()
 
     mkdir_p("@efiSysMountPoint@/EFI/refind")
+    mkdir_p("@efiSysMountPoint@/EFI/nixos")
 
     if os.getenv("NIXOS_INSTALL_BOOTLOADER") == "1":
 

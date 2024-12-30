@@ -96,7 +96,7 @@
     hostName = "arch-desktop";
     system = "x86-64-linux";
     protocol = "ssh-ng";
-    maxJobs = 2;
+    maxJobs = 1;
     speedFactor = 2;
     supportedFeatures = [ "nixos-test" "benchmark" "big-parallel" "kvm" ];
     mandatoryFeatures = [ ];

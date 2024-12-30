@@ -93,7 +93,7 @@
 
   # Distributed builds to desktop
   nix.buildMachines = [ {
-    hostName = "arch-desktop.local";
+    hostName = "arch-desktop";
     system = "x86-64-linux";
     protocol = "ssh-ng";
     maxJobs = 2;

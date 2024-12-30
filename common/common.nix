@@ -76,6 +76,7 @@
     git
     btrfs-progs
     nix-output-monitor
+    barrier
   ];
 
   services.avahi = {

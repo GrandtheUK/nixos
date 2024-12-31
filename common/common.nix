@@ -103,6 +103,6 @@
   }];
   nix.distributedBuilds = true;
   nix.extraOptions = ''
-    builders-user-substitutes = true
+    builders-use-substitutes = true
   '';
 }

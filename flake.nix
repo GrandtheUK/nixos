@@ -9,10 +9,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    envision = {
-      url = "gitlab:Scrumplex/envision/nix";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    # envision = {
+    #   url = "gitlab:Scrumplex/envision/nix";
+    #   inputs.nixpkgs.follows = "nixpkgs";
+    # };
 
     custom-fonts = {
       url = "git+ssh://git@github.com/GrandtheUK/impact-font-nix.git";
@@ -33,7 +33,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs, custom-fonts, jovian, envision, nixpkgs-xr, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, custom-fonts, jovian, nixpkgs-xr, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {

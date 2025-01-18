@@ -50,8 +50,8 @@
         };
       };
     };
-    jovian.configuration = {
-      jovian = {
+    deck.configuration = {
+      inputs.jovian = {
         steam = {
           enable = true;
           autoStart = true;

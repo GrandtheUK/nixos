@@ -13,6 +13,7 @@
     #   url = "gitlab:Scrumplex/envision/nix";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
+    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     custom-fonts = {
       url = "git+ssh://git@github.com/GrandtheUK/impact-font-nix.git";
@@ -21,7 +22,7 @@
 
     jovian = {
       url = "github:Jovian-Experiments/Jovian-NixOS";
-      inputs.nixpkgs.follows = "nixpkgs";
+      # inputs.nixpkgs.follows = "nixpkgs";
     };
     nixpkgs-xr = {
       url = "github:nix-community/nixpkgs-xr";
@@ -33,7 +34,7 @@
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs, custom-fonts, jovian, nixpkgs-xr, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, chaotic, custom-fonts, jovian, nixpkgs-xr, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -46,6 +47,7 @@
         nixUSB = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
+            chaotic.nixosModules.default
             ./nixUSB/hardware.nix
             ./common/common.nix
             ./nixUSB/core.nix
@@ -59,6 +61,7 @@
         desktop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
+            chaotic.nixosModules.default
             ./desktop/hardware.nix
             ./common/common.nix
             ./desktop/core.nix

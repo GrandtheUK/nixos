@@ -50,6 +50,15 @@
         };
       };
     };
+    jovian.configuration = {
+      jovian = {
+        steam = {
+          enable = true;
+          autoStart = true;
+        };
+        devices.steamdeck.enable = true;
+      };
+    };
   };
 
   # nixUSB state version. change if reinstall not from this config

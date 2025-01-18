@@ -22,7 +22,8 @@
 
     jovian = {
       url = "github:Jovian-Experiments/Jovian-NixOS";
-      # inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "chaotic/nixpkgs";
+      follows = "chaotic/jovian";
     };
     nixpkgs-xr = {
       url = "github:nix-community/nixpkgs-xr";

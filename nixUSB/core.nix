@@ -51,7 +51,7 @@
       };
     };
     deck.configuration = {
-      inputs.jovian = {
+      jovian = {
         steam = {
           enable = true;
           autoStart = true;

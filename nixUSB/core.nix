@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, jovian, nixpkgs-android, ...}: {
+{ config, pkgs, inputs, nixpkgs-android, ...}: {
   imports = [
     ../common/flatpak.nix
   ];
@@ -51,9 +51,9 @@
       };
     };
     deck = {
-      inherit jovian;
+      inherit (inputs.jovian);
       configuration = {
-        jovian = {
+        input.jovian = {
           steam = {
             enable = true;
             autoStart = true;

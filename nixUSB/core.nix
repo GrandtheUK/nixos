@@ -54,10 +54,7 @@
       inherit (jovian);
       configuration = {
         jovian = {
-          steam = {
-            enable = true;
-            autoStart = true;
-          };
+          steam.enable = true;
           devices.steamdeck.enable = true;
         };
       };

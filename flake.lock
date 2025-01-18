@@ -27,7 +27,6 @@
       "inputs": {
         "flake-utils": "flake-utils",
         "nixpkgs": [
-          "chaotic",
           "nixpkgs"
         ]
       },
@@ -255,7 +254,6 @@
         "flake-compat": "flake-compat",
         "flake-utils": "flake-utils_2",
         "nixpkgs": [
-          "chaotic",
           "nixpkgs"
         ],
         "treefmt-nix": "treefmt-nix"
@@ -363,7 +361,6 @@
     "zen-browser": {
       "inputs": {
         "nixpkgs": [
-          "chaotic",
           "nixpkgs"
         ]
       },

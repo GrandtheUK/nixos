@@ -18,7 +18,7 @@
 
     custom-fonts = {
       url = "git+ssh://git@github.com/GrandtheUK/impact-font-nix.git";
-      inputs.nixpkgs.follows = "chaotic/nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     jovian = {
@@ -27,17 +27,17 @@
     };
     nixpkgs-xr = {
       url = "github:nix-community/nixpkgs-xr";
-      inputs.nixpkgs.follows = "chaotic/nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
-      inputs.nixpkgs.follows = "chaotic/nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     zen-browser = {
       url = "github:0xc000022070/zen-browser-flake";
-      inputs.nixpkgs.follows = "chaotic/nixpkgs";
+      inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 

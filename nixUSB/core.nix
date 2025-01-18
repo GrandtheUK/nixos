@@ -18,7 +18,7 @@
     libreoffice-qt
   ];
 
-  specialisation = {
+  specialisation = with inputs; {
     nvidia.configuration = {
       services.xserver.videoDrivers = [ "nvidia" ];
 

@@ -18,7 +18,7 @@
     libreoffice-qt
   ];
 
-  specialisation = with inputs; {
+  specialisation = {
     nvidia.configuration = {
       services.xserver.videoDrivers = [ "nvidia" ];
 
@@ -50,13 +50,16 @@
         };
       };
     };
-    deck.configuration = {
-      jovian = {
-        steam = {
-          enable = true;
-          autoStart = true;
+    deck = {
+      inherit jovian;
+      configuration = {
+        jovian = {
+          steam = {
+            enable = true;
+            autoStart = true;
+          };
+          devices.steamdeck.enable = true;
         };
-        devices.steamdeck.enable = true;
       };
     };
   };

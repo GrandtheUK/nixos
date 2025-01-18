@@ -10,6 +10,13 @@
   # enable all software
   nixpkgs.config.allowUnfree = true;
 
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 8*1024;
+    }
+  ];
+
   programs = {
     # enable generic linux binaries
     nix-ld.enable = true;

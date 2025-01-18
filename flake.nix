@@ -2,11 +2,12 @@
   description = "Nixos config flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    # nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
+    nixpkgs.follows = "chaotic/nixpkgs";
 
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "chaotic/nixpkgs";
     };
 
     # envision = {
@@ -17,7 +18,7 @@
 
     custom-fonts = {
       url = "git+ssh://git@github.com/GrandtheUK/impact-font-nix.git";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "chaotic/nixpkgs";
     };
 
     jovian = {
@@ -27,12 +28,18 @@
     };
     nixpkgs-xr = {
       url = "github:nix-community/nixpkgs-xr";
-      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nixpkgs.follows = "chaotic/nixpkgs";
     };
 
-    nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
+      inputs.nixpkgs.follows = "chaotic/nixpkgs";
+    };
 
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "chaotic/nixpkgs";
+    };
   };
 
   outputs = { self, nixpkgs, chaotic, custom-fonts, jovian, nixpkgs-xr, nix-flatpak, ... }@inputs:

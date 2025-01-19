@@ -14,17 +14,17 @@
     #   url = "gitlab:Scrumplex/envision/nix";
     #   inputs.nixpkgs.follows = "nixpkgs";
     # };
-    chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
+    # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
     custom-fonts = {
       url = "git+ssh://git@github.com/GrandtheUK/impact-font-nix.git";
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    jovian = {
-      url = "github:Jovian-Experiments/Jovian-NixOS";
-      follows = "chaotic/jovian";
-    };
+    # jovian = {
+    #   url = "github:Jovian-Experiments/Jovian-NixOS";
+    #   follows = "chaotic/jovian";
+    # };
     nixpkgs-xr = {
       url = "github:nix-community/nixpkgs-xr";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -41,11 +41,11 @@
     };
   };
 
-  outputs = { self, nixpkgs, chaotic, custom-fonts, jovian, nixpkgs-xr, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, custom-fonts, nixpkgs-xr, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
-        overlays = [ jovian.overlay ];
+        overlays = [ ];
         inherit system;
       };
     in
@@ -54,13 +54,13 @@
         nixUSB = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            chaotic.nixosModules.default
+            # chaotic.nixosModules.default
             ./nixUSB/hardware.nix
             ./common/common.nix
             ./nixUSB/core.nix
             ./desktop/vr.nix
             inputs.home-manager.nixosModules.default
-            inputs.jovian.nixosModules.default
+            # inputs.jovian.nixosModules.default
             nixpkgs-xr.nixosModules.nixpkgs-xr
             nix-flatpak.nixosModules.nix-flatpak
             # inputs.nixpkgs.flake.overlays
@@ -69,7 +69,7 @@
         desktop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            chaotic.nixosModules.default
+            # chaotic.nixosModules.default
             ./desktop/hardware.nix
             ./common/common.nix
             ./desktop/core.nix

@@ -50,15 +50,15 @@
         };
       };
     };
-    deck = {
-      inherit (jovian);
-      configuration = {
-        jovian = {
-          steam.enable = true;
-          devices.steamdeck.enable = true;
-        };
-      };
-    };
+    # deck = {
+    #   inherit (jovian);
+    #   configuration = {
+    #     jovian = {
+    #       steam.enable = true;
+    #       devices.steamdeck.enable = true;
+    #     };
+    #   };
+    # };
   };
 
   # nixUSB state version. change if reinstall not from this config

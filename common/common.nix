@@ -6,6 +6,7 @@
     ./gaming.nix
     ./audio.nix
     ./refind.nix
+    ./tailscale.nix
   ];
   # enable all software
   nixpkgs.config.allowUnfree = true;

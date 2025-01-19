@@ -3,4 +3,5 @@
     enable = true;
     useRoutingFeatures = "client";
   };
+  environment.systemPackages = [ pkgs.ktailctl ];
 }

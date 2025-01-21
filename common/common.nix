@@ -7,6 +7,7 @@
     ./audio.nix
     ./refind.nix
     ./tailscale.nix
+    ./distrobox.nix
   ];
   # enable all software
   nixpkgs.config.allowUnfree = true;

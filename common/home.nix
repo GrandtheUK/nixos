@@ -92,7 +92,7 @@
 
   xdg.configFile."openvr/openvrpaths.vrpath".text = ''
     {
-      "config": :
+      "config":
       [
         "${config.xdg.dataHome}/Steam/config"
       ],

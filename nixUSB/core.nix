@@ -5,6 +5,15 @@
   # Temporary while using usb
   boot.loader.grub.efiInstallAsRemovable = true;
 
+  # Corectrl
+  programs.corectrl = {
+    enable = true;
+    gpuOverclock = {
+      enable = true;
+      ppfeaturemask = "0xffffffff";
+    };
+  };
+
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 

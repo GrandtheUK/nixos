@@ -31,7 +31,7 @@ let
 in {
 
   options.boot.loader.refind = {
-    enable = mkEnableOption {
+    enable = mkOption {
       default = false;
       type = types.bool;
       description = "Whether to enable the refind EFI boot manager";

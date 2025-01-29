@@ -147,19 +147,20 @@
       }
     },
     "refind": {
+      "flake": false,
       "locked": {
-        "lastModified": 1658846108,
-        "narHash": "sha256-gkSStUcON/XlVi4NwrTVVosoHr4jAyWiaA5Cf8Dn7IE=",
-        "owner": "betaboon",
-        "repo": "nixpkgs",
-        "rev": "f26b767ef0776c081b5e642bc3ddb7959772781f",
-        "type": "github"
+        "lastModified": 1573473264,
+        "narHash": "sha256-ovfNm8NLgb1Z6vmchZz6tBqqkk0JrbeoCUbegiu8H+U=",
+        "ref": "refs/heads/master",
+        "rev": "66166496b68920bea56d9be1b068bf68550531e9",
+        "revCount": 201189,
+        "type": "git",
+        "url": "https://github.com/betaboon/nixpkgs"
       },
       "original": {
-        "owner": "betaboon",
-        "ref": "master",
-        "repo": "nixpkgs",
-        "type": "github"
+        "rev": "66166496b68920bea56d9be1b068bf68550531e9",
+        "type": "git",
+        "url": "https://github.com/betaboon/nixpkgs"
       }
     },
     "root": {

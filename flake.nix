@@ -5,7 +5,10 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # nixpkgs.follows = "chaotic/nixpkgs";
 
-    refind.url = "git+https://github.com/betaboon/nixpkgs?rev=66166496b68920bea56d9be1b068bf68550531e9";
+    refind = {
+      url = "git+https://github.com/betaboon/nixpkgs?rev=66166496b68920bea56d9be1b068bf68550531e9";
+      flake = false;
+    };
 
     home-manager = {
       url = "github:nix-community/home-manager";

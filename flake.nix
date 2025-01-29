@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # nixpkgs.follows = "chaotic/nixpkgs";
 
-    nixpkgs-refind.url = "github:betaboon/nixpkgs/refind-boot-loader";
+    # nixpkgs-refind.url = "github:betaboon/nixpkgs/refind-boot-loader";
 
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -43,7 +43,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-refind, custom-fonts, nixpkgs-xr, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, custom-fonts, nixpkgs-xr, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -81,7 +81,7 @@
         laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            nixpkgs-refind.system.boot.loader.refind.refind
+            # nixpkgs-refind.system.boot.loader.refind.refind
             ./laptop/hardware/nix
             ./common/common.nix
             ./laptop/core.nix

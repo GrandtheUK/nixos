@@ -5,7 +5,6 @@
     ./kde.nix
     ./gaming.nix
     ./audio.nix
-    ./refind.nix
     ./tailscale.nix
     ./distrobox.nix
   ];

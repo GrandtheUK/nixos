@@ -146,23 +146,6 @@
         "type": "github"
       }
     },
-    "refind": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1573473264,
-        "narHash": "sha256-ovfNm8NLgb1Z6vmchZz6tBqqkk0JrbeoCUbegiu8H+U=",
-        "ref": "refs/heads/master",
-        "rev": "66166496b68920bea56d9be1b068bf68550531e9",
-        "revCount": 201189,
-        "type": "git",
-        "url": "https://github.com/betaboon/nixpkgs"
-      },
-      "original": {
-        "rev": "66166496b68920bea56d9be1b068bf68550531e9",
-        "type": "git",
-        "url": "https://github.com/betaboon/nixpkgs"
-      }
-    },
     "root": {
       "inputs": {
         "custom-fonts": "custom-fonts",
@@ -170,7 +153,6 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nixpkgs-xr": "nixpkgs-xr",
-        "refind": "refind",
         "zen-browser": "zen-browser"
       }
     },

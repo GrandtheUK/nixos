@@ -83,7 +83,7 @@
         laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            "${refind}/system/boot/loader/refind/refind.nix"
+            "${refind}/nixos/modules/system/boot/loader/refind/refind.nix"
             ./laptop/hardware.nix
             ./common/common.nix
             ./laptop/core.nix

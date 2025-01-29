@@ -1,6 +1,6 @@
 { config, pkgs, ...}: {
   imports = [];
-  networking.hostname = "nix-laptop";
+  networking.hostName = "nix-laptop";
   boot.loader = {
     refind = {
       enable = true;

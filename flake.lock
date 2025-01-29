@@ -146,6 +146,22 @@
         "type": "github"
       }
     },
+    "refind": {
+      "locked": {
+        "lastModified": 1658846108,
+        "narHash": "sha256-gkSStUcON/XlVi4NwrTVVosoHr4jAyWiaA5Cf8Dn7IE=",
+        "owner": "betaboon",
+        "repo": "nixpkgs",
+        "rev": "f26b767ef0776c081b5e642bc3ddb7959772781f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "betaboon",
+        "ref": "master",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "custom-fonts": "custom-fonts",
@@ -153,6 +169,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nixpkgs-xr": "nixpkgs-xr",
+        "refind": "refind",
         "zen-browser": "zen-browser"
       }
     },

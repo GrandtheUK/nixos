@@ -84,7 +84,7 @@
           specialArgs = {inherit inputs;};
           modules = [
             refind.system.boot.loader.refind.refind
-            ./laptop/hardware/nix
+            ./laptop/hardware.nix
             ./common/common.nix
             ./laptop/core.nix
           ];

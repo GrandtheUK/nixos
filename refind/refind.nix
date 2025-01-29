@@ -61,7 +61,7 @@ in {
 
     boot.loader.grub.enable = mkDefault false;
 
-    boot.loader.supportsInitrdSecrets = false; # TODO what does this do ?
+    # boot.loader.supportsInitrdSecrets = false; # TODO what does this do ?
 
     system = {
       build.installBootLoader = refindBuilder;

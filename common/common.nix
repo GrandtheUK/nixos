@@ -29,24 +29,6 @@
   #enable flakes
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  # common boot loader/efi details
-  boot = {
-    loader = {
-      systemd-boot.enable = false;
-      efi.efiSysMountPoint = "/boot/efi";
-      grub = {
-        enable = true;
-        efiSupport = true;
-        fsIdentifier = "label";
-        devices = [ "nodev" ];
-        efiInstallAsRemovable = true;
-      };
-      # refind = {
-      #   enable = true;
-      # };
-    };
-  };
-
   # Networking & timezone
   networking.networkmanager.enable = true;
   time.timeZone = "Europe/London";

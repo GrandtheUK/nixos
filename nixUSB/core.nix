@@ -70,6 +70,23 @@
     # };
   };
 
+  boot = {
+    loader = {
+      systemd-boot.enable = false;
+      efi.efiSysMountPoint = "/boot/efi";
+      grub = {
+        enable = true;
+        efiSupport = true;
+        fsIdentifier = "label";
+        devices = [ "nodev" ];
+        efiInstallAsRemovable = true;
+      };
+      # refind = {
+      #   enable = true;
+      # };
+    };
+  };
+
   # nixUSB state version. change if reinstall not from this config
   system.stateVersion = "23.11";
 }

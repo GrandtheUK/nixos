@@ -37,7 +37,6 @@
 
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
 
     zen-browser = {

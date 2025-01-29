@@ -4,6 +4,6 @@
   boot.loader = {
     refind = {
       enable = true;
-    }
-  }
+    };
+  };
 }

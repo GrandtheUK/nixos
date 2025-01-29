@@ -65,7 +65,6 @@
     extraGroups = [ "wheel" ];
     # common user packages. temporary.
     packages = with pkgs; [
-      firefox
       discord
       discord-canary
       vscodium

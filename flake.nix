@@ -5,7 +5,7 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     # nixpkgs.follows = "chaotic/nixpkgs";
 
-    # nixpkgs-refind.url = "github:betaboon/nixpkgs/refind-boot-loader";
+    refind.url = "github:betaboon/nixpkgs";
 
     home-manager = {
       url = "github:nix-community/home-manager";

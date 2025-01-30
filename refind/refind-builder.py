@@ -183,7 +183,7 @@ def main():
     if @extraPaths@ != []:
         print("Copying additional paths")
         refind_root = "@efiSysMountPoint@/efi/refind/extra-icons"
-        for path in @extraPaths@
+        for path in @extraPaths@:
             if os.path.exists(path):
                 if os.path.exists(path + "-backup"):
                     shutil.rmtree(path + "-backup")

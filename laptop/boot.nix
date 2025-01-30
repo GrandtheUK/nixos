@@ -7,9 +7,9 @@
                 extraPaths = [
                     ./refind-theme-nord
                 ];
-                extraConfig = ""
+                extraConfig = ''
                 include ../../refind/refind-theme-nord/theme.conf
-                "";
+                '';
             };
         };
         supportedFilesystems = {

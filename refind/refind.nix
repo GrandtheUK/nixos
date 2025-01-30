@@ -23,6 +23,8 @@ let
 
     extraIcons = if cfg.extraIcons != null then cfg.extraIcons else "";
 
+    extraPaths = cfg.extraPaths;
+
     inherit (pkgs) refind efibootmgr coreutils gnugrep gnused gawk utillinux;
 
     inherit (efi) efiSysMountPoint canTouchEfiVariables;
@@ -47,6 +49,11 @@ in {
       type = types.nullOr types.path;
       default = null;
       description = "A directory containing icons to be copied to 'extra-icons'";
+    };
+    extraPaths = mkOption {
+      type = types.listOf types.path;
+      default = [];
+      description = "A list of paths to copy to the efi directory/refind";
     };
   };
 

@@ -179,6 +179,16 @@ def main():
             os.rename(icons_dir, icons_dir + "-backup")
             print("Notice: Backed up existing extra-icons directory as extra-icons-backup.")
         shutil.copytree("@extraIcons@", icons_dir)
+    
+    if @extraPaths@ != []:
+        print("Copying additional paths")
+        refind_root = "@efiSysMountPoint@/efi/refind/extra-icons"
+        for path in @extraPaths@
+            if os.path.exists(path):
+                if os.path.exists(path + "-backup"):
+                    shutil.rmtree(path + "-backup")
+                os.rename(path, path + "-backup")
+            shutil.copytree(paths, refind_root)
 
     generations = get_generations()
     for profile in get_profiles():

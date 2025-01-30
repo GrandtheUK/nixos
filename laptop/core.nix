@@ -1,14 +1,8 @@
 { config, pkgs, inputs, ...}: {
-  imports = [];
+  imports = [
+    ./boot.nix
+  ];
   networking.hostName = "nix-laptop";
-  boot = {
-    loader = {
-      grub.enable = false;
-      refind.enable = true;
-    };
-    supportedFilesystems = {
-      btrfs = true;
-    };
-  };
+  
   system.stateVersion = "25.05";
 }

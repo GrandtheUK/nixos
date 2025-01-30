@@ -75,7 +75,7 @@
             inputs.home-manager.nixosModules.default
           ];
         };
-        laptop = nixpkgs.lib.nixosSystem {
+        nix-laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
             ./refind/refind.nix

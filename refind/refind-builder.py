@@ -190,7 +190,7 @@ def main():
                 if os.path.exists(themes_dir + "-backup"):
                     shutil.rmtree(themes_dir + "-backup")
                 os.rename(themes_dir, themes_dir + "-backup")
-            shutil.copytree(path, refind_root)
+            shutil.copytree(path, themes_dir)
     else:
         print(themes)
 

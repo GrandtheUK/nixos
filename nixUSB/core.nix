@@ -86,6 +86,12 @@
       # };
     };
   };
+  swapDevices = [
+    {
+      device = "/var/lib/swapfile";
+      size = 8*1024;
+    }
+  ];
 
   # nixUSB state version. change if reinstall not from this config
   system.stateVersion = "23.11";

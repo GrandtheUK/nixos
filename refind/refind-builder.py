@@ -185,11 +185,11 @@ def main():
     if themes != []:
         print("Copying additional paths")
         themes_dir = "@efiSysMountPoint@/efi/refind/themes"
+        if os.path.exists(themes_dir):
+            if os.path.exists(themes_dir + "-backup"):
+                shutil.rmtree(themes_dir + "-backup")
+            os.rename(themes_dir, themes_dir + "-backup")
         for path in themes:
-            if os.path.exists(themes_dir):
-                if os.path.exists(themes_dir + "-backup"):
-                    shutil.rmtree(themes_dir + "-backup")
-                os.rename(themes_dir, themes_dir + "-backup")
             shutil.copytree(path, themes_dir)
     else:
         print(themes)

@@ -116,7 +116,7 @@ menuentry "NixOS" {{
     initrd {initrd}
     options "{kernel_params}"
 }}
-submenu "Generations {{
+submenu "Generations" {{
     {submenuentries}
 }}
 """

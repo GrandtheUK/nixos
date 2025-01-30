@@ -189,6 +189,8 @@ def main():
                     shutil.rmtree(path + "-backup")
                 os.rename(path, path + "-backup")
             shutil.copytree(paths, refind_root)
+    else:
+        print(@extraPaths@)
 
     generations = get_generations()
     for profile in get_profiles():

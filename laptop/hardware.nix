@@ -15,43 +15,7 @@
 
   fileSystems."/" =
     { device = "/dev/disk/by-label/ROOT";
-      fsType = "btrfs";
-      options = [
-        "compress=zstd:4"
-        "subvolid=256"
-      ];
-    };
-  fileSystems."/home" =
-    { device = "/dev/disk/by-label/ROOT";
-      fsType = "btrfs";
-      options = [
-        "compress=zstd:4"
-        "subvolid=257"
-      ];
-    };
-  fileSystems."/nix" =
-    { device = "/dev/disk/by-label/ROOT";
-      fsType = "btrfs";
-      options = [
-        "compress=zstd:4"
-        "subvolid=259"
-      ];
-    };
-  fileSystems."/swap" =
-    { device = "/dev/disk/by-label/ROOT";
-      fsType = "btrfs";
-      options = [
-        "compress=zstd:4"
-        "subvolid=260"
-      ];
-    };
-  fileSystems."/boot" =
-    { device = "/dev/disk/by-label/ROOT";
-      fsType = "btrfs";
-      options = [
-        "compress=zstd:4"
-        "subvolid=258"
-      ];
+      fsType = "ext4";
     };
   fileSystems."/boot/efi" =
     { device = "/dev/disk/by-label/BOOT";

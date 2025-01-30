@@ -23,7 +23,7 @@ let
 
     extraIcons = if cfg.extraIcons != null then cfg.extraIcons else "";
 
-    extraPaths = if cfg.extraIcons != null then cfg.extraIcons else "[]";
+    extraPaths = if cfg.extraPaths != null then cfg.extraPaths else "[]";
 
     inherit (pkgs) refind efibootmgr coreutils gnugrep gnused gawk utillinux;
 

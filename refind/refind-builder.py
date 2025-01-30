@@ -151,6 +151,8 @@ def main():
     parser = argparse.ArgumentParser(description='Update NixOS-related systemd-boot files')
     parser.add_argument('default_config', metavar='DEFAULT-CONFIG', help='The default NixOS config to boot')
     args = parser.parse_args()
+    extraPaths = @extraPaths@
+    print("paths: @extraPaths@")
 
     mkdir_p("@efiSysMountPoint@/efi/refind")
 
@@ -180,17 +182,17 @@ def main():
             print("Notice: Backed up existing extra-icons directory as extra-icons-backup.")
         shutil.copytree("@extraIcons@", icons_dir)
     
-    if @extraPaths@ != []:
+    if extraPaths != []:
         print("Copying additional paths")
         refind_root = "@efiSysMountPoint@/efi/refind/extra-icons"
-        for path in @extraPaths@:
+        for path in extraPaths:
             if os.path.exists(path):
                 if os.path.exists(path + "-backup"):
                     shutil.rmtree(path + "-backup")
                 os.rename(path, path + "-backup")
             shutil.copytree(paths, refind_root)
     else:
-        print(@extraPaths@)
+        print(extraPaths)
 
     generations = get_generations()
     for profile in get_profiles():

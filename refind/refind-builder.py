@@ -65,7 +65,7 @@ def copy_from_profile(profile, generation, name, dry_run=False):
     store_file_path = profile_path(profile, generation, name)
     suffix = os.path.basename(store_file_path)
     store_dir = os.path.basename(os.path.dirname(store_file_path))
-    efi_file_path = "/efi/nixos/%s-%s.efi" % (store_dir, suffix)
+    efi_file_path = "/nixos/%s-%s.efi" % (store_dir, suffix)
     if not dry_run:
         copy_if_not_exists(store_file_path, "@efiSysMountPoint@%s" % (efi_file_path))
     return efi_file_path
@@ -115,6 +115,8 @@ menuentry "NixOS" {{
     loader {kernel}
     initrd {initrd}
     options "{kernel_params}"
+}}
+submenu "Generations {{
     {submenuentries}
 }}
 """

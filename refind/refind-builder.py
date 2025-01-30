@@ -115,8 +115,6 @@ menuentry "NixOS" {{
     loader {kernel}
     initrd {initrd}
     options "{kernel_params}"
-}}
-submenu "Generations" {{
     {submenuentries}
 }}
 """

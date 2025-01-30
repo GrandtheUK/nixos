@@ -190,7 +190,8 @@ def main():
                 shutil.rmtree(themes_dir + "-backup")
             os.rename(themes_dir, themes_dir + "-backup")
         for path in themes:
-            shutil.copytree(path, themes_dir)
+            name = path.split("-", 1)[-1]
+            shutil.copytree(path, themes_dir+"/"+name)
     else:
         print(themes)
 

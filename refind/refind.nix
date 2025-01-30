@@ -23,7 +23,7 @@ let
 
     extraIcons = if cfg.extraIcons != null then cfg.extraIcons else "";
 
-    extraPaths = if cfg.extraPaths != null then cfg.extraPaths else "[]";
+    themes = if cfg.themes != null then cfg.themes else "[]";
 
     inherit (pkgs) refind efibootmgr coreutils gnugrep gnused gawk utillinux;
 
@@ -50,10 +50,10 @@ in {
       default = null;
       description = "A directory containing icons to be copied to 'extra-icons'";
     };
-    extraPaths = mkOption {
+    themes = mkOption {
       type = types.listOf types.path;
       default = [];
-      description = "A list of paths to copy to the efi directory/refind";
+      description = "A list of theme paths to copy";
     };
   };
 

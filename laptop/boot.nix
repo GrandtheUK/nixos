@@ -4,7 +4,7 @@
             grub.enable = false;
             refind = {
                 enable = true;
-                extraPaths = [
+                themes = [
                     ./refind-theme-nord
                     ./test-dir
                 ];

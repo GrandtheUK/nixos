@@ -151,7 +151,7 @@ def main():
     parser = argparse.ArgumentParser(description='Update NixOS-related systemd-boot files')
     parser.add_argument('default_config', metavar='DEFAULT-CONFIG', help='The default NixOS config to boot')
     args = parser.parse_args()
-    extraPaths = @extraPaths@
+    extraPaths = [@extraPaths@]
     print("paths: @extraPaths@")
 
     mkdir_p("@efiSysMountPoint@/efi/refind")

@@ -6,6 +6,7 @@
                 enable = true;
                 extraPaths = [
                     ./refind-theme-nord
+                    ./test-dir
                 ];
                 extraConfig = ''
                 include ../../refind/refind-theme-nord/theme.conf

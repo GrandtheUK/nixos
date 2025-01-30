@@ -9,7 +9,7 @@
                     ./test-dir
                 ];
                 extraConfig = ''
-                include ../../refind/themes/refind-theme-nord/theme.conf
+                include ../themes/refind-theme-nord/theme.conf
                 '';
             };
         };

@@ -166,6 +166,9 @@ def main():
 
         if "@canTouchEfiVariables@" == "1":
             subprocess.check_call(
+                ["@gptfdisk@/bin/sgdisk","-p","/dev/nvme0n1"]
+            )
+            subprocess.check_call(
                 ["@refind@/bin/refind-install"],
                 env={"PATH": ":".join([
                     "@efibootmgr@/bin",

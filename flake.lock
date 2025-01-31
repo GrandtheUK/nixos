@@ -146,6 +146,26 @@
         "type": "github"
       }
     },
+    "refind": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1738359789,
+        "narHash": "sha256-5ap3qE9GMqV+6iVICX/kApt2gH30a1/pLD9hZawiUyg=",
+        "owner": "GrandtheUK",
+        "repo": "refind-nix",
+        "rev": "ef0f2486a3d552d5d177e25caf35deb390d8567d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "GrandtheUK",
+        "repo": "refind-nix",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "custom-fonts": "custom-fonts",
@@ -153,6 +173,7 @@
         "nix-flatpak": "nix-flatpak",
         "nixpkgs": "nixpkgs",
         "nixpkgs-xr": "nixpkgs-xr",
+        "refind": "refind",
         "zen-browser": "zen-browser"
       }
     },

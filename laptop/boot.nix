@@ -1,7 +1,7 @@
 { config, pkgs, inputs, ...}: {
     boot = {
         loader = {
-            efiSysMountPoint = "/boot/efi";
+            efi.efiSysMountPoint = "/boot/efi";
 
             refind = {
                 enable = true;

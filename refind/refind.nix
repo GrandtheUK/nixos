@@ -66,7 +66,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ refind ];
+    environment.systemPackages = with pkgs; [ refind gptfdisk ];
     assertions = [
       {
         assertion = (config.boot.kernelPackages.kernel.features or { efiBootStub = true; }) ? efiBootStub;

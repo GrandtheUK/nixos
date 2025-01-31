@@ -21,6 +21,8 @@ let
 
     extraConfig = cfg.extraConfig;
 
+    maxEntries = cfg.maxGenerations;
+
     extraIcons = if cfg.extraIcons != null then cfg.extraIcons else "";
 
     themes = if cfg.themes != null then cfg.themes else "[]";
@@ -43,6 +45,12 @@ in {
       type = types.lines;
       default = "";
       description = "Extra configuration text appended to refind.conf";
+    };
+
+    maxGenerations = mkOption {
+      type = types.int;
+      default = 100;
+      description = "Maximum number of generations in submenu. This is to avoid problems with refind or possible size problems with the config";
     };
 
     extraIcons = mkOption {

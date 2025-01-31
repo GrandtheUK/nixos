@@ -136,10 +136,15 @@ def write_refind_config(path, default_generation, generations):
 
         rev_generations = sorted(generations, key=lambda x: x[1], reverse=True)
         submenuentries = []
+        max_entries = @maxEntries@
+        current_entry=1
         for generation in rev_generations:
+            if current_entry>max_entries:
+                break
             submenuentries.append(SUBMENUENTRY.format(
                 **generation_details(*generation)
             ))
+            current_entry+=1
 
         f.write(MENU_ENTRY.format(
             **generation_details(*default_generation),

@@ -9,8 +9,7 @@
             refind = {
                 enable = true;
                 themes = [
-                    ./refind-theme-nord
-                    ./test-dir
+                    ./nord
                 ];
                 extraConfig = ''
                 include themes/nord/theme.conf

@@ -27,7 +27,7 @@ let
 
     themes = if cfg.themes != null then cfg.themes else "[]";
 
-    inherit (pkgs) refind efibootmgr coreutils gnugrep gnused gawk utillinux;
+    inherit (pkgs) refind efibootmgr coreutils gnugrep gnused gawk utillinux gptfdisk;
 
     inherit (efi) efiSysMountPoint canTouchEfiVariables;
   };

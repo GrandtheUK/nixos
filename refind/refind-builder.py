@@ -174,6 +174,7 @@ def main():
                     "@gnugrep@/bin",
                     "@gnused@/bin",
                     "@gawk@/bin",
+                    "@gptfdisk@/bin"
                 ])}
             )
         else:

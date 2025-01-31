@@ -10,6 +10,11 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
+    refind = {
+      url = "github:GrandtheUK/refind-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     # envision = {
     #   url = "gitlab:Scrumplex/envision/nix";
     #   inputs.nixpkgs.follows = "nixpkgs";
@@ -40,7 +45,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, custom-fonts, nixpkgs-xr, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, refind, custom-fonts, nixpkgs-xr, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -78,7 +83,7 @@
         nix-laptop = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
-            ./refind/refind.nix
+            refind.nixosModules.refind
             ./laptop/hardware.nix
             ./common/common.nix
             ./laptop/core.nix

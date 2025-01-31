@@ -12,6 +12,10 @@
     openDefaultPorts = true;
     dataDir = "/home/ben/Documents";
     user = "ben";
+    settings.gui = {
+      user = "ben";
+      password = "temporary";
+    };
   };
   
   system.stateVersion = "25.05";

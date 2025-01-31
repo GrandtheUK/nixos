@@ -27,7 +27,7 @@ let
 
     themes = if cfg.themes != null then cfg.themes else "[]";
 
-    inherit (pkgs) refind efibootmgr coreutils gnugrep gnused gawk utillinux gptfdisk;
+    inherit (pkgs) refind efibootmgr coreutils gnugrep gnused gawk utillinux gptfdisk findutils;
 
     inherit (efi) efiSysMountPoint canTouchEfiVariables;
   };
@@ -66,7 +66,7 @@ in {
   };
 
   config = mkIf cfg.enable {
-    environment.systemPackages = with pkgs; [ refind gptfdisk ];
+    environment.systemPackages = with pkgs; [ refind gptfdisk findutils ];
     assertions = [
       {
         assertion = (config.boot.kernelPackages.kernel.features or { efiBootStub = true; }) ? efiBootStub;

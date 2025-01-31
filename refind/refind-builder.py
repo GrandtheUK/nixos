@@ -183,7 +183,7 @@ def main():
             print("DONT KNOW WHAT TO DO")
 
     if "@extraIcons@" != "":
-        icons_dir = "@efiSysMountPoint@/efi/refind/extra-icons"
+        icons_dir = "@efiSysMountPoint@/EFI/refind/extra-icons"
         if os.path.exists(icons_dir):
             if os.path.exists(icons_dir + "-backup"):
                 shutil.rmtree(icons_dir + "-backup")
@@ -193,7 +193,7 @@ def main():
     
     if themes != []:
         print("Copying additional paths")
-        themes_dir = "@efiSysMountPoint@/efi/refind/themes"
+        themes_dir = "@efiSysMountPoint@/EFI/refind/themes"
         if os.path.exists(themes_dir):
             if os.path.exists(themes_dir + "-backup"):
                 shutil.rmtree(themes_dir + "-backup")
@@ -213,7 +213,7 @@ def main():
             default_generation = generation
 
     write_refind_config(
-        "@efiSysMountPoint@/efi/refind/refind.conf",
+        "@efiSysMountPoint@/EFI/refind/refind.conf",
         default_generation,
         generations
     )

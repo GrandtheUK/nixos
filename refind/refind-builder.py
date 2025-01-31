@@ -181,6 +181,7 @@ def main():
                     "@findutils@/bin"
                 ])}
             )
+            os.remove("/boot/refind_linux.conf")
         else:
             print("DONT KNOW WHAT TO DO")
 

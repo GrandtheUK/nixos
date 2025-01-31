@@ -157,7 +157,6 @@ def main():
     parser.add_argument('default_config', metavar='DEFAULT-CONFIG', help='The default NixOS config to boot')
     args = parser.parse_args()
     themes = "@themes@".split()
-    print("paths:", themes )
 
     mkdir_p("@efiSysMountPoint@/EFI/refind")
     mkdir_p("@efiSysMountPoint@/EFI/nixos")

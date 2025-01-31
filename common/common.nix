@@ -47,6 +47,7 @@
       krita
       cargo
       rustc
+      hugo
     ] ++ [
       inputs.zen-browser.packages."${system}".default
     ];

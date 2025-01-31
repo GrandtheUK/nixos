@@ -1,7 +1,8 @@
 { config, pkgs, inputs, ...}: {
     boot = {
         loader = {
-            grub.enable = false;
+            efiSysMountPoint = "/boot/efi";
+
             refind = {
                 enable = true;
                 themes = [

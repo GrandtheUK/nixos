@@ -68,6 +68,7 @@ def copy_from_profile(profile, generation, name, dry_run=False):
     efi_file_path = "/EFI/nixos/%s-%s.efi" % (store_dir, suffix)
     if not dry_run:
         copy_if_not_exists(store_file_path, "@efiSysMountPoint@%s" % (efi_file_path))
+    return efi_file_path
 
 
 def describe_generation(generation_dir):

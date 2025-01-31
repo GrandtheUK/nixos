@@ -10,6 +10,7 @@
   services.syncthing = {
     enable = true;
     openDefaultPorts = true;
+    dataDir = "/home/ben/Documents";
   };
   
   system.stateVersion = "25.05";

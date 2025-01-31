@@ -11,6 +11,7 @@
                 extraConfig = ''
                 include ../themes/refind-theme-nord/theme.conf
                 '';
+                maxGenerations = 10;
             };
         };
         supportedFilesystems = {

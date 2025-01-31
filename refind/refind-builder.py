@@ -191,7 +191,6 @@ def main():
         shutil.copytree("@extraIcons@", icons_dir)
     
     if themes != []:
-        print("Copying additional paths")
         themes_dir = "@efiSysMountPoint@/EFI/refind/themes"
         if os.path.exists(themes_dir):
             if os.path.exists(themes_dir + "-backup"):

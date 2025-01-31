@@ -161,10 +161,8 @@ def main():
 
     mkdir_p("@efiSysMountPoint@/EFI/refind")
     mkdir_p("@efiSysMountPoint@/EFI/nixos")
-    print(os.getenv("NIXOS_INSTALL_BOOTLOADER"))
 
     if os.getenv("NIXOS_INSTALL_BOOTLOADER") == "1":
-        print("@canTouchEfiVariables@")
 
         if "@canTouchEfiVariables@" == "1":
             subprocess.check_call(

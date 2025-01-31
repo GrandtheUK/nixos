@@ -160,6 +160,7 @@ def main():
     print("paths:", themes )
 
     mkdir_p("@efiSysMountPoint@/efi/refind")
+    mkdir_p("@efiSysMountPoint@/efi/nixos")
 
     if os.getenv("NIXOS_INSTALL_BOOTLOADER") == "1":
 

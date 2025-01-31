@@ -11,6 +11,7 @@
     enable = true;
     openDefaultPorts = true;
     dataDir = "/home/ben/Documents";
+    configDir = "/home/ben/.config/syncthing";
     user = "ben";
     settings.gui = {
       user = "ben";

@@ -8,11 +8,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1738421569,
-        "narHash": "sha256-6xoxxUzsJuA3zJk3U79IUwtFhdlxlY5mM66sPaABUSQ=",
+        "lastModified": 1738423636,
+        "narHash": "sha256-tQgQsojvqldxO82Dhw0RkYLXp+OksjVtGrji79kRba4=",
         "ref": "refs/heads/main",
-        "rev": "7b4089583d7fa9960c94de8bcd7deb2233912283",
-        "revCount": 4,
+        "rev": "bc49c473984caf5d8a2db05f360afa20b8debe15",
+        "revCount": 9,
         "type": "git",
         "url": "ssh://git@github.com/GrandtheUK/impact-font-nix.git"
       },

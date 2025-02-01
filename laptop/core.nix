@@ -25,6 +25,24 @@
           devices = [ "Desktop" "ZFold3" ];
           ignorePerms = true;
         };
+        "Memes" = {
+          ID = "kw2yz-kgvn5";
+          path = "/home/ben/Documents/Memes";
+          devices = [ "Desktop" "ZFold3" ];
+          ignorePerms = true;
+        };
+        "Finance" = {
+          ID = "tctel-wnkzd";
+          path = "/home/ben/Documents/Finances";
+          devices = [ "Desktop" "ZFold3" ];
+          ignorePerms = true;
+        };
+        "Clocktower Scripts" = {
+          ID = "z6ivn-fylce";
+          path = "/home/ben/Documents/BOTC";
+          devices = [ "Desktop" "ZFold3" ];
+          ignorePerms = true;
+        };
       };
     };
   };

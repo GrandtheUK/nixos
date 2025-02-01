@@ -64,7 +64,7 @@
     nix-output-monitor
     barrier
   ] ++ [
-    inputs.custom-fonts.defaultPackage.${pkgs.system}
+    inputs.custom-fonts.${pkgs.system}.impact
   ];
 
   services.avahi = {

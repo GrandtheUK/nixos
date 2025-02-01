@@ -63,7 +63,9 @@
     btrfs-progs
     nix-output-monitor
     barrier
-  ] ++ [
+  ];
+
+  fonts.packages = [
     inputs.custom-fonts.packages.${pkgs.system}.default
   ];
 

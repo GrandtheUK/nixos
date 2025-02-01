@@ -1,4 +1,4 @@
-{ config, pkgs, custom-fonts, inputs, ...}: {
+{ config, pkgs, inputs, ...}: {
   # specialArgs = {inherit inputs;};
   imports = [
     inputs.home-manager.nixosModules.default
@@ -64,7 +64,7 @@
     nix-output-monitor
     barrier
   ] ++ [
-    custom-fonts.defaultPackage.${pkgs.system}
+    inputs.custom-fonts.defaultPackage.${pkgs.system}
   ];
 
   services.avahi = {

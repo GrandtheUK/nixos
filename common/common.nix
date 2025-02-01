@@ -63,7 +63,7 @@
     btrfs-progs
     nix-output-monitor
     barrier
-    impact
+    custom-fonts.impact
   ];
 
   services.avahi = {

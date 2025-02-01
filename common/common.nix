@@ -48,6 +48,7 @@
       cargo
       rustc
       hugo
+      gimp
     ] ++ [
       inputs.zen-browser.packages."${system}".default
     ];

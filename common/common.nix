@@ -65,8 +65,8 @@
     barrier
   ];
 
-  fonts.packages = [
-    inputs.custom-fonts.packages.${pkgs.system}.default
+  fonts.packages = with pkgs; [
+    corefonts
   ];
 
   services.avahi = {

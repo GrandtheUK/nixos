@@ -1,4 +1,4 @@
-{ config, pkgs, custom-fonts, inputs, ...}: {
+{ config, pkgs, inputs, ...}: {
   # enable audio
   # sound.enable = true;
 

@@ -21,11 +21,6 @@
     # };
     # chaotic.url = "github:chaotic-cx/nyx/nyxpkgs-unstable";
 
-    custom-fonts = {
-      url = "git+ssh://git@github.com/GrandtheUK/impact-font-nix.git";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-
     # jovian = {
     #   url = "github:Jovian-Experiments/Jovian-NixOS";
     #   follows = "chaotic/jovian";
@@ -45,7 +40,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, refind, custom-fonts, nixpkgs-xr, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, refind, nixpkgs-xr, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {

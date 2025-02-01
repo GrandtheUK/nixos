@@ -19,7 +19,8 @@
         "ZFold3" = { id = "2QH4QSF-SDJMZEO-RL5WNXD-NYU6TDN-AVCV3IV-FK7GHLW-6SD3D6J-7VHA5QN"; };
       };
       folders = {
-        "9ax4a-smam2" = {
+        "TTRPG" = {
+          ID = "9ax4a-smam2";
           path = "/home/ben/Documents/TTRPG";
           devices = [ "Desktop" "ZFold3" ];
           ignorePerms = true;

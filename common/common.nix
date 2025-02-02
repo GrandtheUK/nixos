@@ -50,6 +50,7 @@
       hugo
       go
       gimp
+      waypipe
     ] ++ [
       inputs.zen-browser.packages."${system}".default
     ];

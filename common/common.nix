@@ -51,6 +51,8 @@
       go
       gimp
       waypipe
+      fusee-nano
+      fusee-interfacee-tk
     ] ++ [
       inputs.zen-browser.packages."${system}".default
     ];
@@ -65,6 +67,7 @@
     btrfs-progs
     nix-output-monitor
     barrier
+    usbutils
   ];
 
   fonts.packages = with pkgs; [

@@ -53,10 +53,13 @@
       waypipe
       fusee-nano
       fusee-interfacee-tk
+      gfxtablet
     ] ++ [
       inputs.zen-browser.packages."${system}".default
     ];
   };
+  
+  networking.firewall.allowedUDPPorts = [ 40118 ];
 
   # common system packages
   environment.systemPackages = with pkgs; [

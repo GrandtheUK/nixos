@@ -66,7 +66,7 @@
   networking.firewall.allowedUDPPorts = [ 40118 ];
 
   # common system packages
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = (with pkgs; [
     nh
     nano
     wget
@@ -75,7 +75,11 @@
     nix-output-monitor
     barrier
     usbutils
-  ];
+  ]) ++ (with inputs.nix-gaming.packages.${pkgs.system}; [
+    osu-stable
+    modrinth-app
+    umu-launcher
+  ]);
 
   fonts.packages = with pkgs; [
     corefonts

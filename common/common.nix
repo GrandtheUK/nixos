@@ -77,8 +77,6 @@
     usbutils
   ]) ++ (with inputs.nix-gaming.packages.${pkgs.system}; [
     osu-stable
-    modrinth-app
-    umu-launcher
   ]);
 
   fonts.packages = with pkgs; [

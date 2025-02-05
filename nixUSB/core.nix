@@ -2,8 +2,6 @@
   imports = [
     ../common/flatpak.nix
   ];
-  # Temporary while using usb
-  boot.loader.grub.efiInstallAsRemovable = true;
 
   # Corectrl
   programs.corectrl = {

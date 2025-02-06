@@ -12,11 +12,11 @@
 
     fileSystems = {
         "/" = {
-            device = "";
+            device = "/dev/disk/by-label/ROOT";
             fsType = "ext4";
         };
         "/boot/efi" = {
-            device = "";
+            device = "/dev/disk/by-label/BOOT";
             fsType = "vfat";
         };
     };

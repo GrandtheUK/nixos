@@ -10,4 +10,11 @@
     vscodium
     gimp
   ];
+  boot.loader = {
+    grub.enable = true;
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot/efi";
+    };
+  };
 }

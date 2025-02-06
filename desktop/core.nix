@@ -11,7 +11,10 @@
     gimp
   ];
   boot.loader = {
-    grub.enable = true;
+    grub = {
+      enable = true;
+      device = "nodev";
+    };
     efi = {
       canTouchEfiVariables = true;
       efiSysMountPoint = "/boot/efi";

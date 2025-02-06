@@ -42,7 +42,7 @@
   };
   users.users.ben = {
     isNormalUser = true;
-    extraGroups = [ "wheel" ];
+    extraGroups = [ "wheel" "libvirtd" ];
     # common user packages. temporary.
     packages = with pkgs; [
       discord

@@ -59,7 +59,6 @@
             ./nixUSB/hardware.nix
             ./common/common.nix
             ./nixUSB/core.nix
-            ./desktop/vr.nix
             inputs.home-manager.nixosModules.default
             # inputs.jovian.nixosModules.default
             nixpkgs-xr.nixosModules.nixpkgs-xr

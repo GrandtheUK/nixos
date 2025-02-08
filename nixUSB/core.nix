@@ -2,6 +2,7 @@
   imports = [
     ../common/flatpak.nix
   ];
+  networking.hostName = "nix-usb";
 
   # Corectrl
   programs.corectrl = {

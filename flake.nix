@@ -52,7 +52,7 @@
     in
     {
       nixosConfigurations = {
-        nixUSB = nixpkgs.lib.nixosSystem {
+        nix-usb = nixpkgs.lib.nixosSystem {
           specialArgs = {inherit inputs;};
           modules = [
             # chaotic.nixosModules.default

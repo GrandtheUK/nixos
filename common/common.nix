@@ -18,7 +18,8 @@
     nix-ld.enable = true;
     nix-ld.libraries = with pkgs; [
       # missing libraries
-    ];    
+    ];  
+    extra-container.enable = true;
   };
 
   #enable flakes

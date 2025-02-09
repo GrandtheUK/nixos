@@ -16,11 +16,16 @@
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 
+  # Envision additional packages
+  programs.envision = {
+    enable = true;
+    # add missing deps TODO
+  };
+
   # laptop specific packages
   users.users.ben.packages = with pkgs; [
     gimp
     obs-studio
-    envision
   ];
 
   environment.systemPackages = with pkgs; [

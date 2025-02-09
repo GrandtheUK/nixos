@@ -20,6 +20,7 @@
   users.users.ben.packages = with pkgs; [
     gimp
     obs-studio
+    envision
   ];
 
   environment.systemPackages = with pkgs; [

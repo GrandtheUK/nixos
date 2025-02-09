@@ -13,6 +13,15 @@
     };
   };
 
+  security.wrappers = {
+    "steamVR" = {
+      capabilities = "set_cap_nice+eip";
+      source = "/home/ben/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher";
+      owner = "ben";
+      group = "users";
+    };
+  };
+
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 

@@ -1,9 +1,9 @@
-{ config, pkgs, ...}: {
+{ config, pkgs, lib, ...}: {
   # Enable KDE Plasma 6
   services = {
     xserver.enable = true;
     displayManager = {
-      sddm = {
+      sddm = lib.mkDefault {
         enable = true;
         extraPackages = with pkgs; [ kdePackages.qtvirtualkeyboard ];
       };

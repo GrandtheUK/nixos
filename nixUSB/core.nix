@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, jovian, nixpkgs-android, ...}: {
+{ config, pkgs, lib, inputs, jovian, nixpkgs-android, ...}: {
   imports = [
     ../common/flatpak.nix
   ];
@@ -12,6 +12,9 @@
       ppfeaturemask = "0xffffffff";
     };
   };
+  services.displayManager.sddm.enable = false;
+  services.xserver.displayManager.lightdm.enable = true;
+
 
   security.wrappers = {
     "steamVR" = {

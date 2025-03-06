@@ -3,7 +3,10 @@
   services = {
     xserver.enable = true;
     displayManager = {
-      sddm.enable = true;
+      sddm = {
+        enable = true;
+        extraPackages = with pkgs; [ libsForQt5.qt5.qtvirtualkeyboard ];
+      };
     };
     desktopManager = {
       plasma6.enable = true;

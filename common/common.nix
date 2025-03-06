@@ -11,7 +11,7 @@
   # enable all software
   nixpkgs.config.allowUnfree = true;
 
-  
+  i18n.defaultLocale = "en_GB.UTF-8";
 
   programs = {
     # enable generic linux binaries

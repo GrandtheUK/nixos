@@ -28,12 +28,11 @@
       xdg-desktop-portal
       maliit-keyboard
       maliit-framework
-    ]) ++ (with pkgs.libsForQt5; [
+    ]) ++ (with pkgs.kdePackages; [
       kate
       xdg-desktop-portal-kde
       polkit-kde-agent
       kcalc
-    ]) ++ (with pkgs.kdePackages; [
       partitionmanager
       qtvirtualkeyboard
     ]);

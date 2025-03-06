@@ -20,14 +20,17 @@
   ];
 
   # Add additional kde software
-  environment.systemPackages = with pkgs; [
-      libsForQt5.polkit-kde-agent
+  environment.systemPackages = (with pkgs; [
       konsole
-      libsForQt5.kate
-      libsForQt5.xdg-desktop-portal-kde
       xdg-desktop-portal
-      kdePackages.partitionmanager
-    ];
+    ]) ++ (with pkgs.libsForQt5; [
+      kate
+      xdg-desktop-portal-kde
+      polkit-kde-agent
+      kcalc
+    ]) ++ (with pkgs.kdePackages; [
+      partitionmanager
+    ]);
 
 
   # kde connect

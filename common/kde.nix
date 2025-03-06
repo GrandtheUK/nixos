@@ -5,7 +5,7 @@
     displayManager = {
       sddm = {
         enable = true;
-        extraPackages = with pkgs; [ libsForQt5.qt5.qtvirtualkeyboard ];
+        extraPackages = with pkgs; [ kdePackages.qtvirtualkeyboard ];
       };
     };
     desktopManager = {
@@ -33,9 +33,9 @@
       xdg-desktop-portal-kde
       polkit-kde-agent
       kcalc
-      qt5.qtvirtualkeyboard
     ]) ++ (with pkgs.kdePackages; [
       partitionmanager
+      qtvirtualkeyboard
     ]);
 
 

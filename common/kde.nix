@@ -31,7 +31,7 @@
     ]) ++ (with pkgs.kdePackages; [
       kate
       xdg-desktop-portal-kde
-      polkit-kde-agent
+      polkit-kde-agent-1
       kcalc
       partitionmanager
       qtvirtualkeyboard

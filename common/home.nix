@@ -3,6 +3,7 @@
 {
   # Home Manager needs a bit of information about you and the paths it should
   # manage.
+  home.language.base = "en_GB.UTF-8";
   home.username = "ben";
   home.homeDirectory = "/home/ben";
 

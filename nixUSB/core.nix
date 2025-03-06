@@ -16,14 +16,14 @@
   services.xserver.displayManager.lightdm.enable = true;
 
 
-  security.wrappers = {
-    "steamVR" = {
-      capabilities = "set_cap_nice+eip";
-      source = "/home/ben/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher";
-      owner = "ben";
-      group = "users";
-    };
-  };
+  # security.wrappers = {
+  #   "steamVR" = {
+  #     capabilities = "set_cap_nice+eip";
+  #     source = "/home/ben/.local/share/Steam/steamapps/common/SteamVR/bin/linux64/vrcompositor-launcher";
+  #     owner = "ben";
+  #     group = "users";
+  #   };
+  # };
 
   # Enable bluetooth
   hardware.bluetooth.enable = true;

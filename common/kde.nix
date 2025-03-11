@@ -29,6 +29,7 @@
       maliit-keyboard
       maliit-framework
     ]) ++ (with pkgs.kdePackages; [
+      plasma-workspace
       kate
       xdg-desktop-portal-kde
       polkit-kde-agent-1

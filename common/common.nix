@@ -50,8 +50,6 @@
       discord-canary
       vscodium
       krita
-      cargo
-      rustc
       hugo
       go
       gimp

@@ -24,11 +24,11 @@
 
   # Add additional kde software
   environment.systemPackages = (with pkgs; [
-      konsole
       xdg-desktop-portal
       maliit-keyboard
       maliit-framework
     ]) ++ (with pkgs.kdePackages; [
+      konsole
       plasma-workspace
       kate
       xdg-desktop-portal-kde

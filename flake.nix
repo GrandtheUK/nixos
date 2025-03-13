@@ -40,6 +40,8 @@
     };
 
     nix-gaming.url = "github:fufexan/nix-gaming";
+
+    nixpkgs-stdb.url = "github:akotro/nixpkgs/spacetimedb";
   };
 
   outputs = { self, nixpkgs, refind, nixpkgs-xr, nix-flatpak, ... }@inputs:

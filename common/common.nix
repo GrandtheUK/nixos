@@ -78,7 +78,9 @@
     usbutils
   ]) ++ (with inputs.nix-gaming.packages.${pkgs.system}; [
     osu-stable
-  ]);
+  ]) ++ [
+    pkgs.callPackage "${inputs.nixpkgs-stdb}/pkgs/by-name/sp/spacetimedb/package.nix" {}
+  ];
 
   fonts.packages = with pkgs; [
     corefonts

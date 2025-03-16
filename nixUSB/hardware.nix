@@ -8,24 +8,45 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "nvme" "xhci_pci" "uas" "rtsx_pci_sdmmc" ];
-  boot.initrd.kernelModules = [ ];
-  boot.kernelModules = [ "kvm-amd" ];
-  boot.extraModulePackages = [ ];
-
-  fileSystems."/" =
-    # { device = "/dev/disk/by-uuid/0f2b6fe5-51b5-409f-9adb-585694f09140";
-    {device = "/dev/disk/by-label/NIX-ROOT";
-      fsType = "ext4";
+  fileSystems = {
+    "/" = {
+      device = "/dev/disk/by-label/NIX-ROOT";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd:1"
+        "subvolid=256"
+      ];
     };
-
-  fileSystems."/boot/efi" =
-    # { device = "/dev/disk/by-uuid/BAD7-BF9A";
-    {device = "/dev/disk/by-label/NIX-BOOT";
+    "/home" = {
+      device = "/dev/disk/by-label/NIX-ROOT";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd:1"
+        "subvolid=257"
+      ];
+    };
+    "/nix" = {
+      device = "/dev/disk/by-label/NIX-ROOT";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd:1"
+        "subvolid=258"
+        "noatime"
+      ];
+    };
+    "/var" = {
+      device = "/dev/disk/by-label/NIX-ROOT";
+      fsType = "btrfs";
+      options = [
+        "compress=zstd:1"
+        "subvolid=259"
+      ];
+    };
+    "/boot/efi" = {
+      device = "/dev/disk/by-label/NIX-BOOT";
       fsType = "vfat";
     };
-
-  swapDevices = [ ];
+  };
 
   # Enables DHCP on each ethernet and wireless interface. In case of scripted networking
   # (the default) this is the recommended approach. When using systemd-networkd it's

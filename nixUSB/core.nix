@@ -102,6 +102,12 @@
       #   enable = true;
       # };
     };
+    initrd = {
+      availableKernelModules = [ "nvme" "xhci_pci" "uas" "rtsx_pci_sdmmc" ];
+      kernelModules = [ ];
+    };
+    kernelModules = [ "kvm_amd" ];
+    extraModulePackages = [ ];
   };
   swapDevices = [
     {
@@ -111,5 +117,5 @@
   ];
 
   # nixUSB state version. change if reinstall not from this config
-  system.stateVersion = "23.11";
+  system.stateVersion = "25.05";
 }

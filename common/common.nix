@@ -20,6 +20,10 @@
       # missing libraries
     ];  
     extra-container.enable = true;
+    nh = {
+      enable = true;
+      flake = "/home/ben/.nixos";
+    };
   };
 
   #enable flakes
@@ -68,7 +72,6 @@
 
   # common system packages
   environment.systemPackages = (with pkgs; [
-    nh
     nano
     wget
     git

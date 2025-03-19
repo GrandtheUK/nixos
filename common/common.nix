@@ -30,7 +30,10 @@
   };
 
   # Networking & timezone
-  networking.networkmanager.enable = true;
+  networking.networkmanager = {
+    enable = true;
+    dhcp = "dhcpcd";
+  };
   time.timeZone = "Europe/London";
 
   # set up home-manager and user accounts

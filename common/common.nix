@@ -32,7 +32,6 @@
   # Networking & timezone
   networking.networkmanager = {
     enable = true;
-    dhcp = "dhcpcd";
   };
   time.timeZone = "Europe/London";
 
@@ -77,7 +76,6 @@
     nix-output-monitor
     barrier
     usbutils
-    dhcpcd
   ]) ++ (with inputs.nix-gaming.packages.${pkgs.system}; [
     osu-stable
   ]) ++ [

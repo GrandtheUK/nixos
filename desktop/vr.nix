@@ -2,7 +2,7 @@
   # Envison stuff to go here
   environment.systemPackages = [
 #    inputs.envision.packages.x86_64-linux.envision
-    inputs.nixpkgs-xr.packages.x86_64-linux.wlx-overlay-s
+    pkgs.x86_64-linux.wlx-overlay-s
   ];
   # programs.envision = {
   #   enable = true;

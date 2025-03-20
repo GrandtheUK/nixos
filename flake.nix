@@ -25,10 +25,6 @@
     #   url = "github:Jovian-Experiments/Jovian-NixOS";
     #   follows = "chaotic/jovian";
     # };
-    nixpkgs-xr = {
-      url = "github:nix-community/nixpkgs-xr";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
 
     nix-flatpak = {
       url = "github:gmodena/nix-flatpak/?ref=v0.4.1";
@@ -42,7 +38,7 @@
     nix-gaming.url = "github:fufexan/nix-gaming";
   };
 
-  outputs = { self, nixpkgs, refind, nixpkgs-xr, nix-flatpak, ... }@inputs:
+  outputs = { self, nixpkgs, refind, nix-flatpak, ... }@inputs:
     let
       system = "x86_64-linux";
       pkgs = import nixpkgs {
@@ -61,7 +57,6 @@
             ./nixUSB/core.nix
             inputs.home-manager.nixosModules.default
             # inputs.jovian.nixosModules.default
-            nixpkgs-xr.nixosModules.nixpkgs-xr
             nix-flatpak.nixosModules.nix-flatpak
             # inputs.nixpkgs.flake.overlays
           ];

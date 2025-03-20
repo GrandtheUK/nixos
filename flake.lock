@@ -136,22 +136,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-stdb": {
-      "locked": {
-        "lastModified": 1741717286,
-        "narHash": "sha256-2r2GxUZaN4UKvuUzt5dTDg9tgfPXxueXhNhpEvnncGc=",
-        "owner": "akotro",
-        "repo": "nixpkgs",
-        "rev": "02592332f906148341ca62346448133dced871b4",
-        "type": "github"
-      },
-      "original": {
-        "owner": "akotro",
-        "ref": "spacetimedb",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-xr": {
       "inputs": {
         "flake-compat": "flake-compat",
@@ -177,11 +161,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1741513245,
-        "narHash": "sha256-7rTAMNTY1xoBwz0h7ZMtEcd8LELk9R5TzBPoHuhNSCk=",
+        "lastModified": 1742288794,
+        "narHash": "sha256-Txwa5uO+qpQXrNG4eumPSD+hHzzYi/CdaM80M9XRLCo=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "e3e32b642a31e6714ec1b712de8c91a3352ce7e1",
+        "rev": "b6eaf97c6960d97350c584de1b6dcff03c9daf42",
         "type": "github"
       },
       "original": {
@@ -217,7 +201,6 @@
         "nix-flatpak": "nix-flatpak",
         "nix-gaming": "nix-gaming",
         "nixpkgs": "nixpkgs_2",
-        "nixpkgs-stdb": "nixpkgs-stdb",
         "nixpkgs-xr": "nixpkgs-xr",
         "refind": "refind",
         "zen-browser": "zen-browser"

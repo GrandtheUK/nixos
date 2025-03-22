@@ -80,6 +80,7 @@
     barrier
     usbutils
     spacetimedb
+    wireguard-tools
   ]) ++ (with inputs.nix-gaming.packages.${pkgs.system}; [
     osu-stable
   ]);

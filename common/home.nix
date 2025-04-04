@@ -78,6 +78,13 @@
       enable = true;
       userName = "Grand";
       userEmail = "grand.uk@tutanota.com";
+      extraConfig = {
+        core.excludesFile = builtins.toFile "gitExclude" "
+        shell.nix
+        flake.nix
+        flake.lock
+        ";
+      };
     };
     # Partial History completion in bash
     bash = {

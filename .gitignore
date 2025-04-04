@@ -1,0 +1,3 @@
+# Counteract home-manager/nixos git config to ignore flake files
+!flake.nix
+!flake.lock

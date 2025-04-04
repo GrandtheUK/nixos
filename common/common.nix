@@ -54,6 +54,7 @@
     packages = with pkgs; [
       discord
       discord-canary
+      betterdiscord-installer
       vscodium
       krita
       hugo

@@ -55,7 +55,13 @@
       discord
       discord-canary
       betterdiscordctl
-      vscodium
+      (vscode-with-extensions.override {
+        vscodeExtensions = with vscode-extensions; [
+          bbenoist.nix
+          rust-lang.rust-analyzer
+          jnoortheen.nix-ide
+        ];
+      })
       krita
       hugo
       go

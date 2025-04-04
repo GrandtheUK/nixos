@@ -78,7 +78,16 @@
       enable = true;
       userName = "Grand";
       userEmail = "grand.uk@tutanota.com";
-      ignores = [ "flake.nix" "flake.lock" "shell.nix"];
+      extraConfig = {
+        core.excludesfile = pkgs.writeTextFile {
+          name = ".gitignore";
+          text = ''
+          flake.nix
+          flake.lock
+          shell.nix
+          '';
+        };
+      };
     };
     # Partial History completion in bash
     bash = {

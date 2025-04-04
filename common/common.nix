@@ -61,7 +61,7 @@
           bbenoist.nix
           rust-lang.rust-analyzer
           jnoortheen.nix-ide
-          arrterian.nix-env-selector
+          oops418.nix-env-picker
         ];
       })
       krita

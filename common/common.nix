@@ -56,6 +56,7 @@
       discord-canary
       betterdiscordctl
       (vscode-with-extensions.override {
+        vscode = vscodium;
         vscodeExtensions = with vscode-extensions; [
           bbenoist.nix
           rust-lang.rust-analyzer

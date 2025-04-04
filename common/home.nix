@@ -78,13 +78,7 @@
       enable = true;
       userName = "Grand";
       userEmail = "grand.uk@tutanota.com";
-      extraConfig = {
-        core.excludesFile = builtins.toFile "gitExclude" "
-        shell.nix
-        flake.nix
-        flake.lock
-        ";
-      };
+      ignores = [ "flake.nix" "flake.lock" "shell.nix"];
     };
     # Partial History completion in bash
     bash = {

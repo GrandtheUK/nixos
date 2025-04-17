@@ -78,9 +78,9 @@
       enable = true;
       userName = "Grand";
       userEmail = "grand.uk@tutanota.com";
-      extraConfig = {
-        core.excludesfile = {./gitignore};
-      };
+      # extraConfig = {
+      #   core.excludesfile = import ./gitignore;
+      # };
     };
     # Partial History completion in bash
     bash = {

@@ -79,14 +79,7 @@
       userName = "Grand";
       userEmail = "grand.uk@tutanota.com";
       extraConfig = {
-        core.excludesfile = pkgs.writeTextFile {
-          name = ".gitignore";
-          text = ''
-          flake.nix
-          flake.lock
-          shell.nix
-          '';
-        };
+        core.excludesfile = {./gitignore};
       };
     };
     # Partial History completion in bash

@@ -53,7 +53,6 @@
     # common user packages. temporary.
     packages = with pkgs; [
       discord
-      discord-canary
       betterdiscordctl
       (vscode-with-extensions.override {
         vscode = vscodium;

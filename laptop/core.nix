@@ -5,6 +5,7 @@
   networking.hostName = "nix-laptop";
   environment.systemPackages = with pkgs; [
     libreoffice-qt6
+    warpinator
   ];
   hardware.bluetooth.enable = true;
   services.syncthing = {
@@ -22,6 +23,10 @@
     };
   };
   systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
+  networking.firewall = {
+    allowedTCPPorts = [ 42000 42001 ];
+    allowedUDPPorts = [ 42000 42001 ];
+  };
 
   # virtualisation
   virtualisation.libvirtd.enable = true;

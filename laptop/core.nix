@@ -20,6 +20,7 @@
       };
     };
   };
+  systemd.services.syncthing.environment.STNODEFAULTFOLDER = "true";
 
   # virtualisation
   virtualisation.libvirtd.enable = true;

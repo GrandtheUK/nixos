@@ -13,6 +13,7 @@
     dataDir = "/home/ben/Documents";
     configDir = "/home/ben/.config/syncthing";
     user = "ben";
+    overrideFolders = false;
     settings = {
       devices = {
         "Desktop" = { id = "HKEKVOA-AZF7UMF-QNZPY3I-ZUT6XZU-GEYBUMM-HJCUT7L-6IBCGAF-JDLV4AJ"; };

@@ -53,6 +53,7 @@
     # common user packages. temporary.
     packages = with pkgs; [
       discord
+      wacomtablet
       betterdiscordctl
       (vscode-with-extensions.override {
         vscode = vscodium;

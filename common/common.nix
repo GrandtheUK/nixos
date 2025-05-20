@@ -24,6 +24,7 @@
       enable = true;
       flake = "/home/ben/.nixos";
     };
+    localsend.enable = true;
   };
 
   #enable flakes
